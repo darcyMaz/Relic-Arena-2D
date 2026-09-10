@@ -14,12 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
   m_GroupName: Relics
   m_GUID: 1a5c575c86086624a8e19273465a51a8
-  m_SerializeEntries:
-  - m_GUID: 987da0201e2cb454281d639c2daa0048
-    m_Address: Assets/Code/Items/Relic/Relics/Ancient Vase.asset
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 142d6d6d0db1e9847b1b31b1ff04ab27, type: 2}
   m_SchemaSet:

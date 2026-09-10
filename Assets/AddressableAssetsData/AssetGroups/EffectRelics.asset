@@ -14,12 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
   m_GroupName: EffectRelics
   m_GUID: bab84afbc226c5f48bd4c22b6fafd7dc
-  m_SerializeEntries:
-  - m_GUID: 5fffdf070cc3e2f4fb046485f421242e
-    m_Address: Assets/Code/Items/Relic/EffectRelics/Zeus' Left Toe.asset
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 142d6d6d0db1e9847b1b31b1ff04ab27, type: 2}
   m_SchemaSet:
