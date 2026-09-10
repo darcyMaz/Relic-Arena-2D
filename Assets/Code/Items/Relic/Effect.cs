@@ -2,6 +2,10 @@ using UnityEngine;
 
 public enum Effect
 {
-    LIGHTNING,
+    None,
+    InstantLightning,
+    DelayedLightning,
+    SlowDownSpeed,
+    TwoSecondKnockout
 
 }

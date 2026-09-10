@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using System.Drawing;
 using UnityEngine;
 
+/**
+ * TwoDTree was created by Adam Zeimann in Java and adapted into C# by Darcy Mazloum (without AI).
+ * https://github.com/AdamZieman/2d-coordinate-bst
+ */
+
 public class TwoDTree
 {
     TreeNode Root; // the root of the 2D tree

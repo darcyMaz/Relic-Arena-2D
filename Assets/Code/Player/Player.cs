@@ -72,12 +72,37 @@ public class Player : MonoBehaviour, IEffectable
         throw new NotImplementedException();
     }
 
+    private void EffectRelicHitPlayer()
+    {
+        throw new NotImplementedException();
+    }
+
     void IEffectable.ReceiveEffect()
     {
         throw new NotImplementedException();
     }
 
     void IEffectable.LoseEffect()
+    {
+        throw new NotImplementedException();
+    }
+
+    void IEffectable.InstantLightning()
+    {
+        throw new NotImplementedException();
+    }
+
+    void IEffectable.DelayedLightning(float delay)
+    {
+        throw new NotImplementedException();
+    }
+
+    void IEffectable.SlowDownSpeed()
+    {
+        throw new NotImplementedException();
+    }
+
+    void IEffectable.TwoSecondKnockout()
     {
         throw new NotImplementedException();
     }

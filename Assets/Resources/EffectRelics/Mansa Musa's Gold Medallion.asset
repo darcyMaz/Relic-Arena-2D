@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f2fb43d53465b54e962dd2f7a8e4560, type: 3}
-  m_Name: Zeus' Left Toe
+  m_Name: Mansa Musa's Gold Medallion
   m_EditorClassIdentifier: Assembly-CSharp::EffectRelic
-  Name: Zeus' Left Toe
+  Name: Mansa Musa's Gold Medallion
   Sprite: {fileID: 0}
-  Price: 10
-  PassiveEffect: 1
-  ActiveEffect: 0
+  Price: 20
+  PassiveEffect: 3
+  ActiveEffect: 4

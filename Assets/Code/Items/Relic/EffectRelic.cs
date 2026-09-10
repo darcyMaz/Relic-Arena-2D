@@ -3,10 +3,15 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "EffectRelic", menuName = "Scriptable Objects/EffectRelic")]
 public class EffectRelic : Relic
 {
-    [SerializeField] private Effect RelicEffect;
+    [SerializeField] private Effect PassiveEffect;
+    [SerializeField] private Effect ActiveEffect;
 
-    public Effect GetEffect()
+    public Effect GetPassiveEffect()
     {
-        return RelicEffect;
-    }  
+        return PassiveEffect;
+    }
+    public Effect GetActiveEffect()
+    {
+        return ActiveEffect;
+    }
 }
