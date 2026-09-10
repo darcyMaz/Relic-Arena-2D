@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f2fb43d53465b54e962dd2f7a8e4560, type: 3}
+  m_Name: Zeus' Left Toe
+  m_EditorClassIdentifier: Assembly-CSharp::EffectRelic
+  Name: Zeus' Left Toe
+  Sprite: {fileID: 0}
+  Price: 10
+  RelicEffect: 0
