@@ -21,7 +21,7 @@ public class Inventory : IEnumerable<Item>
         return GetEnumerator();
     }
 
-    
+
     // Methods that can change the inventory.
     public void AddItem(Item newItem)
     {
