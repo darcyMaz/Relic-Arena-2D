@@ -38,5 +38,17 @@ public class TwoDTreeTest1: MonoBehaviour
 
         Debug.Log(tree.Search(new Vector2(60, 23)));
 
+        Debug.Log(tree.Search(new Vector2(1, 2)));
+        Debug.Log(tree.Search(new Vector2(1, 3)));
+        Debug.Log(tree.Search(new Vector2(4, 1)));
+
+        Debug.Log("---------");
+
+        foreach (Vector2 result in tree.SearchRange( new Vector2(1,1) , new Vector2(10,10) ))
+        {
+            Debug.Log(result);
+        }
+        // Debug.Log(tree.SearchRange( new Vector2(1,1) , new Vector2(1,5) ));
+
     }
 }
