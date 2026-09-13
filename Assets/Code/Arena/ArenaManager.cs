@@ -68,6 +68,7 @@ public class ArenaManager : MonoBehaviour
     private void Start()
     {
 
+        /*
         // TO-DO: Change this such that the code can use a maximum range to see if there are any relics nearby (so relics don't spawn in too close).
         // I can use or create a comparator for this. Go through all other positions, O(n).
         for (int relicIndex = 0; relicIndex < 10; relicIndex++)
@@ -94,6 +95,7 @@ public class ArenaManager : MonoBehaviour
             }
 
         }
+        */
 
     }
 
@@ -113,6 +115,9 @@ public class ArenaManager : MonoBehaviour
     {
 
     }
+
+    
+
     /*
     private Relic RandomlyChooseRelic()
     {
