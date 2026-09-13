@@ -113,6 +113,7 @@ public class ArenaManager : MonoBehaviour
     {
 
     }
+    /*
     private Relic RandomlyChooseRelic()
     {
         // There is certainly a more concise way to do this random choice of Item type.
@@ -136,4 +137,5 @@ public class ArenaManager : MonoBehaviour
             return null;
         }
     }
+    */
 }
