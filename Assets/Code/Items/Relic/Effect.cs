@@ -6,6 +6,7 @@ public enum Effect
     InstantLightning,
     DelayedLightning,
     SlowDownSpeed,
-    TwoSecondKnockout
+    TwoSecondKnockout,
+    Test
 
 }

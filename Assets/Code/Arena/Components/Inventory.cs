@@ -1,7 +1,8 @@
  using System;
 using System.Collections;
 using System.Collections.Generic;
-public class Inventory : IEnumerable<Item>
+using UnityEngine;
+public class Inventory : MonoBehaviour, IEnumerable<Item>
 {
 
     // A private list of Items.

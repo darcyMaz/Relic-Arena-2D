@@ -1,6 +1,8 @@
 using System;
+using System.Collections.Generic;
+using UnityEngine;
 
-public interface IEffectable
+public abstract class IEffectable: MonoBehaviour
 {
     // IEffectables (1) inform others that they have received or lost effects
     //              (2) have some functionality for receiving and losing effects and
@@ -9,12 +11,19 @@ public interface IEffectable
     public event Action <Effect> OnEffectReceived;
     public event Action <Effect> OnEffectLost;
 
+    protected Dictionary<Effect, Action> _effectsDict = new Dictionary<Effect, Action>();
 
-    protected void ReceiveEffect();
-    protected void LoseEffect();
+    private void Awake()
+    {
+        _effectsDict.TryAdd(Effect.Test, this.EffectTest);
+    }   
 
-    protected void InstantLightning();
-    protected void DelayedLightning(float delay);
-    protected void SlowDownSpeed();
-    protected void TwoSecondKnockout();
+    protected void InstantLightning()
+    {
+
+    }
+    protected void EffectTest()
+    {
+        EffectsManager.Instance.EffectTest();
+    }
 }
