@@ -5,26 +5,25 @@ using System;
 public class ArenaManager : MonoBehaviour
 {
 
-    // the arena manager's first purpose is to spawn in relics at random and communicate their position for anyone to hear
-    // So the arena needs a coordinate system and access to the relics themselves
-    // I'll need to load in the relics from here or have a seperate class which does that and ArenaManager quickly grabs them.
+    // the arena manager's first purpose is to spawn in RelicSOs at random and communicate their position for anyone to hear
+    // So the arena needs a coordinate system and access to the RelicSOs themselves
+    // I'll need to load in the RelicSOs from here or have a seperate class which does that and ArenaManager quickly grabs them.
 
-    public event Action OnLackingBuriedRelics;
+    public event Action OnLackingBuriedRelicSOs;
 
     private SpriteRenderer _spriteRenderer;
     private bool _hasSR = false;
 
 
-    // private EffectRelic[] _effectRelics;
-    // private Relic[] _relics;
-    private List<EffectRelic> _effectRelics;
-    private List<Relic> _relics;
+    // private EffectRelicSO[] _effectRelicSOs;
+    // private RelicSO[] _RelicSOs;
+    private List<RelicSO> _RelicSOs;
 
-    [SerializeField] private float EffectRelicSpawnRate = 0.1666f;
-    [SerializeField] private float RelicSpawnRate = 1;
+    [SerializeField] private float EffectRelicSOSpawnRate = 0.1666f;
+    [SerializeField] private float RelicSOSpawnRate = 1;
 
-    [SerializeField] private int MaxRelicsBuried = 10;
-    private TwoDTree _relicTree = new TwoDTree();
+    [SerializeField] private int MaxRelicSOsBuried = 10;
+    private TwoDTree _RelicSOTree = new TwoDTree();
 
 
     private void Awake()
@@ -32,22 +31,22 @@ public class ArenaManager : MonoBehaviour
         // TO DO: Make this a singleton.
 
 
-        // Load in all of the Relic scriptable objects.
-        // Load in all of the EffectRelic scriptable objects.
+        // Load in all of the RelicSO scriptable objects.
+        // Load in all of the EffectRelicSO scriptable objects.
 
-        EffectRelic[] effectRelics = Resources.LoadAll<EffectRelic>("EffectRelics");
-        Relic[] relics = Resources.LoadAll<Relic>("Relics");
+        // EffectRelicSO[] effectRelicSOs = Resources.LoadAll<EffectRelicSO>("EffectRelicSOs");
+        RelicSO[] RelicSOs = Resources.LoadAll<RelicSO>("RelicSOs");
 
-        foreach (Relic relic in relics)
+        foreach (RelicSO RelicSO in RelicSOs)
         {
 
         }
 
-        // __effectRelics = new List<EffectRelic>(_effectRelics);  // Error here!
+        // __effectRelicSOs = new List<EffectRelicSO>(_effectRelicSOs);  // Error here!
 
         // TO DO: Switching from the resources folder to addressables.
 
-        // Get values representing the bounds of the coordinate system for spawning relics.
+        // Get values representing the bounds of the coordinate system for spawning RelicSOs.
         if (TryGetComponent(out _spriteRenderer))
         {
             _hasSR = true;
@@ -58,8 +57,8 @@ public class ArenaManager : MonoBehaviour
         }
     }
 
-    // This is async as burying a relic could take more than one frame. Maybe not.
-    private async void Update()
+    // This is async as burying a RelicSO could take more than one frame. Maybe not.
+    private void Update()
     {
         
 
@@ -69,29 +68,29 @@ public class ArenaManager : MonoBehaviour
     {
 
         /*
-        // TO-DO: Change this such that the code can use a maximum range to see if there are any relics nearby (so relics don't spawn in too close).
+        // TO-DO: Change this such that the code can use a maximum range to see if there are any RelicSOs nearby (so RelicSOs don't spawn in too close).
         // I can use or create a comparator for this. Go through all other positions, O(n).
-        for (int relicIndex = 0; relicIndex < 10; relicIndex++)
+        for (int RelicSOIndex = 0; RelicSOIndex < 10; RelicSOIndex++)
         {
-            int relicAttempts = 0;
-            int maxRelicAttempts = 20;
+            int RelicSOAttempts = 0;
+            int maxRelicSOAttempts = 20;
 
-            // Bury 10 relics.
-            for (; relicAttempts < maxRelicAttempts; relicAttempts++)
+            // Bury 10 RelicSOs.
+            for (; RelicSOAttempts < maxRelicSOAttempts; RelicSOAttempts++)
             {
                 // Check if we are randomly generating duplicates.
-                // 20 attempts, and if we somehow generate 20 duplicates attempting to bury 1 relic, we'll throw an error.
-                Vector2 potentialRelicPosition = GetRandomPosition();
-                if (_relicTree.Search( potentialRelicPosition ))
+                // 20 attempts, and if we somehow generate 20 duplicates attempting to bury 1 RelicSO, we'll throw an error.
+                Vector2 potentialRelicSOPosition = GetRandomPosition();
+                if (_RelicSOTree.Search( potentialRelicSOPosition ))
                 {
                     continue;
                 }
                 break;
             }
             
-            if (maxRelicAttempts == 20)
+            if (maxRelicSOAttempts == 20)
             {
-                Debug.LogError("The ArenaManager treid to bury a relic but it generated duplicate coordinates (tried to bury a relic on top of another) 20 times in a row. There is likely a flaw in the code logic.");
+                Debug.LogError("The ArenaManager treid to bury a RelicSO but it generated duplicate coordinates (tried to bury a RelicSO on top of another) 20 times in a row. There is likely a flaw in the code logic.");
             }
 
         }
@@ -111,7 +110,7 @@ public class ArenaManager : MonoBehaviour
 
 
 
-    private void BuryRelic(Relic relicToBury)
+    private void BuryRelicSO(RelicSO RelicSOToBury)
     {
 
     }
@@ -119,26 +118,26 @@ public class ArenaManager : MonoBehaviour
     
 
     /*
-    private Relic RandomlyChooseRelic()
+    private RelicSO RandomlyChooseRelicSO()
     {
         // There is certainly a more concise way to do this random choice of Item type.
         float randResult = UnityEngine.Random.Range(0,1);
-        if (randResult >= 0 && randResult < EffectRelicSpawnRate)
+        if (randResult >= 0 && randResult < EffectRelicSOSpawnRate)
         {
-            //return _effectRelics[UnityEngine.Random.Range(0,_effectRelics.Length)];
+            //return _effectRelicSOs[UnityEngine.Random.Range(0,_effectRelicSOs.Length)];
         }
-        else if (randResult >= EffectRelicSpawnRate && randResult < RelicSpawnRate)
+        else if (randResult >= EffectRelicSOSpawnRate && randResult < RelicSOSpawnRate)
         {
-            //return _relics[UnityEngine.Random.Range(0,_relics.Length)];
+            //return _RelicSOs[UnityEngine.Random.Range(0,_RelicSOs.Length)];
         }
-        else if (randResult >= RelicSpawnRate || randResult <= 1)
+        else if (randResult >= RelicSOSpawnRate || randResult <= 1)
         {
-            Debug.Log("ArenaManager.BurRelic() tried to randomly choose what kind of Item to spawn, but the random number did not fit the code logic: " + randResult);
+            Debug.Log("ArenaManager.BurRelicSO() tried to randomly choose what kind of Item to spawn, but the random number did not fit the code logic: " + randResult);
             return null;
         }
         else
         {
-            Debug.Log("ArenaManager.BurRelic() tried to randomly choose what kind of Item to spawn, but the random number did not fit the code logic: " + randResult);
+            Debug.Log("ArenaManager.BurRelicSO() tried to randomly choose what kind of Item to spawn, but the random number did not fit the code logic: " + randResult);
             return null;
         }
     }

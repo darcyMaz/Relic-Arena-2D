@@ -1,18 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Item", menuName = "Scriptable Objects/Item")]
-public class Item : ScriptableObject
+public class Item : MonoBehaviour
 {
-    [SerializeField] private string Name;
-
-    [SerializeField] private Sprite Sprite;
-
-    public string GetName()
-    {
-        return Name;
-    }
-    public Sprite GetSprite()
-    {
-        return Sprite;
-    }
+    
 }

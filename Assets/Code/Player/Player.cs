@@ -44,39 +44,6 @@ public class Player : IEffectable
         }
     }
 
-    private void Update()
-    {
-        /*
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            Debug.Log("Implement Test Effect.");
-
-            
-        }
-        */
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        // This function will help us understand if an Item has been thrown at us.
-        
-        if (collision.gameObject.tag == "Relic")
-        {
-            // TryGetComponent relic
-            // relic.geteffect
-            // effectdict.trygetval(effect)
-
-            /*
-            Action testAction;
-            _effectsDict.TryGetValue(Effect.Test, out testAction);
-            testAction.Invoke();
-             */
-
-            // Next question: how to cancel an effect in motion
-        }
-
-    }
-
     public int GetPlayerNumber()
     {
         return PlayerNumber;

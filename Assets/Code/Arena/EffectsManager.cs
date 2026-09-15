@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class EffectsManager : MonoBehaviour
@@ -6,6 +7,9 @@ public class EffectsManager : MonoBehaviour
     public static EffectsManager Instance { get; private set; }
 
     private bool TestEffectLock = false;
+
+    private Dictionary<IEffectable, List<Effect>> _effectables = new Dictionary<IEffectable, List<Effect>>();  
+
 
     private void Awake()
     {
@@ -15,6 +19,8 @@ public class EffectsManager : MonoBehaviour
             return;
         }
         Instance = this;
+
+
     }
 
     public async void EffectTest()
