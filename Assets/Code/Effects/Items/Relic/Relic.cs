@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Relic : MonoBehaviour
 {
-    private RelicSO _relic;
+    [SerializeField] private RelicSO _relic;
 
     public Relic(RelicSO relicSO)
     {
@@ -26,6 +26,7 @@ public class Relic : MonoBehaviour
     }
     public string GetEffectDetails()
     {
+        CheckRelic();
         return _relic.GetEffectDetails();
     }
 
