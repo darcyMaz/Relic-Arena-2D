@@ -877,7 +877,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1346370991}
   - component: {fileID: 1346370990}
-  - component: {fileID: 1346370989}
   - component: {fileID: 1346370988}
   - component: {fileID: 1346370992}
   - component: {fileID: 1346370993}
@@ -915,31 +914,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!114 &1346370989
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1346370987}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ade11a8ddea7314c8e73b4fb6c21aba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  Speed: 2
-  _movement:
-    m_Name: 
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: c27fcf8c-54ca-4c6d-9f06-c9cd731e0a79
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
-    m_Priority: 0
-  _rigidBody: {fileID: 0}
-  _hasRB: 0
 --- !u!212 &1346370990
 SpriteRenderer:
   serializedVersion: 2
